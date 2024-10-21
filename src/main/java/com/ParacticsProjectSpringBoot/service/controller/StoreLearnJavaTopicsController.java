@@ -108,7 +108,8 @@ public class StoreLearnJavaTopicsController {
                 writer.write("</div>");
                 writer.write("</div>");
                 writer.write("</div>");
-                // Footer section
+                // Footer sectionsssss
+
                 writer.write("<!-- Footer -->\n");
                 writer.write("<footer>\n");
                 writer.write("    <p>&copy; 2024 Learn Java - All rights reserved.</p>\n");
