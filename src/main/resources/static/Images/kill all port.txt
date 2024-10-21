@@ -1,0 +1,11 @@
+SOLUTION 2
+If the above solution is not working use this solution. Here we kill the process which used that port using command prompt.
+
+In my case, Port =8090, PID =22208
+
+1). (This use to find PID)
+
+netstat -ano | findstr :8090
+2). (Kill that proccess)
+
+ taskkill /PID 22208 /F

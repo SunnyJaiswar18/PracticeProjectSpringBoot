@@ -1,0 +1,118 @@
+*{
+margin:0;
+padding:0;
+box-sizing:inherit;
+}
+
+body {
+    background-image: url(/Images/core-java.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 90%;
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5858ac;
+    padding: 14px 20px;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.navbar .logo {
+    font-weight: bold;
+}
+
+.login-btn {
+    background-color: white;
+    color: #800080;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background-color: #800080;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.welcome-text {
+    display: inline-block;
+    padding: 9px 110px;
+    border-radius: 15px;
+    margin-top: 40px;
+    background-color: #5858ac;
+}
+
+.welcome-text h1{
+    color: white;
+}
+.welcome-text p{
+    color: white;
+}
+
+/* Features Section */
+.features-section {
+    text-align: center;
+    padding: 50px 20px;
+    width: 53%;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    display: block;
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit;
+}
+
+.feature img {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #5858ac;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding:10px;
+    }
