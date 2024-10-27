@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,88 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/corejava.css">
 </head>
+
 <body>
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="navbar-left">
-        <a href="#" class="logo">♨️Learn Java</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="logo">♨️Learn Java</a>
+        </div>
+        <div class="navbar-center">
+            <a href="#">Category</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="navbar-right">
+            <button class="login-btn">Login</button>
+        </div>
+    </nav>
     </div>
-    <div class="navbar-center">
-        <a href="#">Category</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+    <div class="selectRiderForm">
+        <ul class="sortable-list">
+            <!-- List items will be generated here -->
+        </ul>
     </div>
-    <div class="navbar-right">
-        <button class="login-btn">Login</button>
+    <div class="mainSection">
+        <div class="w3-example">
+            <h2>Java Syntax</h2>
+            <div class="w3-code notranslate htmlHigh">
+                <p>In the previous chapter, we created a Java file called Main.java, and we used the following code to print "Hello World" to the screen:</p>
+                <p class="heading-colour">Main.java</p>   
+                <p class="heading-distance">public class Main {</br>
+                   public static void main(String[] args) {</br>
+                     System.out.println("Hello World");</br>
+                   }</br>
+                 }</p>
+
+                <h2 class="heading-distance"> Example explained</h2>
+                 <p class="heading-distance">Every line of code that runs in Java must be inside a class. And the class name should always start with an uppercase first letter. In our example, we named the class Main.</p>
+                 
+                 <p class="heading-distance">Note: Java is case-sensitive: "MyClass" and "myclass" has different meaning.</p>
+                 
+                 <p class="heading-distance">The name of the java file must match the class name. When saving the file, save it using the class name and add ".java" to the end of the filename. To run the example above on your computer, make sure that Java is properly installed: Go to the Get Started Chapter for how to install Java. The output should be:</p> 
+                 <b class="heading-distance"><u>output: Hello World</u></b> 
+                 
+                 
+                 <h2 class="heading-distance">The main Method</h2>
+                 <p class="heading-distance">The main() method is required and you will see it in every Java program:</p>
+
+                    <p class="heading-distance">public static void main(String[] args)</p>
+                        <p class="heading-distance">Any code inside the main() method will be executed. Don't worry about the keywords before and after it. You will get to know them bit by bit while reading this tutorial.</p>
+
+                            <p class="heading-distance">For now, just remember that every Java program has a class name which must match the filename, and that every program must contain the main() method.</p>
+                            
+                            <h2 class="heading-distance"> System.out.println()</h2>
+                            <p class="heading-distance"> Inside the main() method, we can use the println() method to print a line of text to the screen:</p>
+                            
+                                <p class="heading-distance">public class Main {</br>
+                                    public static void main(String[] args) {</br>
+                                      System.out.println("Hello World");</br>
+                                    }</br>
+                                  }</p>
+            </div>
+        </div>
+
+        <div class="w3-example">
+            <h2>note</h2>
+            <div class="w3-code notranslate htmlHigh">
+                <p class="heading-distance">Note: The curly braces {} marks the beginning and the end of a block of code.</p>
+
+                    <p class="heading-distance">System is a built-in Java class that contains useful members, such as out, which is short for "output". The println() method, short for "print line", is used to print a value to the screen (or a file).</p>
+
+                        <p class="heading-distance">Don't worry too much about how System, out and println() works. Just know that you need them together to print stuff to the screen.</p>
+
+                            <p class="heading-distance">You should also note that each code statement must end with a semicolon (;).</p>
+            </div>
+        </div>
     </div>
-</nav>
-</div><div class="selectRiderForm">
-    <ul class="sortable-list">
-        <!-- List items will be generated here -->
-    </ul>
-</div>
-<div class="mainSection"><div class="w3-example"><h2>Java Tutorial</h2><div class="w3-code notranslate htmlHigh"></div></div></div></div><!-- Footer -->
-<footer>
-    <p>&copy; 2024 Learn Java - All rights reserved.</p>
-</footer>
-<!-- JavaScript -->
-<script src="/Javascript/scripts.js"></script>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Learn Java - All rights reserved.</p>
+    </footer>
+    <!-- JavaScript -->
+    <script src="/Javascript/scripts.js"></script>
 </body>
+
 </html>
