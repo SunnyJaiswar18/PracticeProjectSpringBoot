@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,67 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/corejava.css">
 </head>
+
 <body>
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="navbar-left">
-        <a href="#" class="logo">♨️Learn Java</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="logo">♨️Learn Java</a>
+        </div>
+        <div class="navbar-center">
+            <a href="#">Category</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="navbar-right">
+            <button class="login-btn">Login</button>
+        </div>
+    </nav>
     </div>
-    <div class="navbar-center">
-        <a href="#">Category</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+    <div class="selectRiderForm">
+        <ul class="sortable-list">
+            <!-- List items will be generated here -->
+        </ul>
     </div>
-    <div class="navbar-right">
-        <button class="login-btn">Login</button>
+    <div class="mainSection">
+        <div class="w3-example">
+            <h2>Java Comments</h2>
+            <div class="w3-code notranslate htmlHigh">
+                <p>Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.</p>
+               <h2 class="heading-distance">Single-line Comments</h2>
+
+             <p>Single-line comments start with two forward slashes (//).</p>
+
+             <p>Any text between // and the end of the line is ignored by Java (will not be executed).</p>
+
+             <p>This example uses a single-line comment before a line of code:</p></br>
+             <p>// This is a comment</p>
+             System.out.println("Hello World");</p>
+            </div>
+        </div>
+
+        <div class="w3-example">
+            <h2>Java Multi-line Comments</h2>
+            <div class="w3-code notranslate htmlHigh">
+             <p>Multi-line comments start with /* and ends with */.
+
+                Any text between /* and */ will be ignored by Java.
+                
+                This example uses a multi-line comment (a comment block) to explain the code:</p>
+
+             <p class="heading-distance">/* The code below will print the words Hello World
+                to the screen, and it is amazing */
+                System.out.println("Hello World");</p>
+            </div>
+        </div></h2>
     </div>
-</nav>
-</div><div class="selectRiderForm">
-    <ul class="sortable-list">
-        <!-- List items will be generated here -->
-    </ul>
-</div>
-<div class="mainSection"><div class="w3-example"><h2>Java Tutorial</h2><div class="w3-code notranslate htmlHigh"></div></div></div></div><!-- Footer -->
-<footer>
-    <p>&copy; 2024 Learn Java - All rights reserved.</p>
-</footer>
-<!-- JavaScript -->
-<script src="/Javascript/scripts.js"></script>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Learn Java - All rights reserved.</p>
+    </footer>
+    <!-- JavaScript -->
+    <script src="/Javascript/scripts.js"></script>
 </body>
+
 </html>

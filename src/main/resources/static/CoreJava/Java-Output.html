@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,76 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/corejava.css">
 </head>
+
 <body>
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="navbar-left">
-        <a href="#" class="logo">♨️Learn Java</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="logo">♨️Learn Java</a>
+        </div>
+        <div class="navbar-center">
+            <a href="#">Category</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="navbar-right">
+            <button class="login-btn">Login</button>
+        </div>
+    </nav>
     </div>
-    <div class="navbar-center">
-        <a href="#">Category</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+    <div class="selectRiderForm">
+        <ul class="sortable-list">
+            <!-- List items will be generated here -->
+        </ul>
     </div>
-    <div class="navbar-right">
-        <button class="login-btn">Login</button>
+    <div class="mainSection">
+        <div class="w3-example">
+            <h2>Print Text</h2>
+            <div class="w3-code notranslate htmlHigh">
+                <p>You learned from the previous chapter that you can use the println() method to output values or print
+                    text in Java:</p>
+                <p class="heading-distance">You can add as many println() methods as you want. Note that it will add a
+                    new line for each method:</p>
+                <p>System.out.println("Hello World!");</p>
+                <p>System.out.println("I am learning Java.");</p>
+                <p>System.out.println("It is awesome!");</p>
+
+                <h3 class="heading-distance">Double Quotes</h3>
+                <p>Text must be wrapped inside double quotations marks "".</p>
+
+                <p class="heading-distance">If you forget the double quotes, an error occurs:</p>
+
+                <p>System.out.println("This sentence will work!");</p></br>
+                System.out.println(This sentence will produce an error);</br>
+
+                <p class="heading-distance">The Print() Method
+                    There is also a print() method, which is similar to println().
+                    The only difference is that it does not insert a new line at the end of the output:</p>
+
+            </div>
+        </div>
+
+        <div class="w3-example">
+            <h2>Print Numbers</h2>
+            <div class="w3-code notranslate htmlHigh">
+                <p>You can also use the println() method to print numbers.
+                    However, unlike text, we don't put numbers inside double quotes:</p>
+                <p>System.out.println(3);</p>
+                <p>System.out.println(185);</p>
+                <p>System.out.println(185513);</p>
+
+                <p class="heading-distance">You can also perform mathematical calculations inside the println() method:</p>
+
+                <p>System.out.println(3 + 3);</p>
+            </div>
+        </div>
     </div>
-</nav>
-</div><div class="selectRiderForm">
-    <ul class="sortable-list">
-        <!-- List items will be generated here -->
-    </ul>
-</div>
-<div class="mainSection"><div class="w3-example"><h2>Java Tutorial</h2><div class="w3-code notranslate htmlHigh"></div></div></div></div><!-- Footer -->
-<footer>
-    <p>&copy; 2024 Learn Java - All rights reserved.</p>
-</footer>
-<!-- JavaScript -->
-<script src="/Javascript/scripts.js"></script>
+    </div><!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Learn Java - All rights reserved.</p>
+    </footer>
+    <!-- JavaScript -->
+    <script src="/Javascript/scripts.js"></script>
 </body>
+
 </html>

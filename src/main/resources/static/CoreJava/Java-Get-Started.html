@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,79 +8,92 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/corejava.css">
 </head>
+
 <body>
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="navbar-left">
-        <a href="#" class="logo">♨️Learn Java</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="logo">♨️Learn Java</a>
+        </div>
+        <div class="navbar-center">
+            <a href="#">Category</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="navbar-right">
+            <button class="login-btn">Login</button>
+        </div>
+    </nav>
     </div>
-    <div class="navbar-center">
-        <a href="#">Category</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+    <div class="selectRiderForm">
+        <ul class="sortable-list">
+            <!-- List items will be generated here -->
+        </ul>
     </div>
-    <div class="navbar-right">
-        <button class="login-btn">Login</button>
-    </div>
-</nav>
-</div>
-<div class="selectRiderForm">
-    <ul class="sortable-list">
-        <!-- List items will be generated here -->
-    </ul>
-</div>
-<div class="mainSection">
-    <div class="w3-example">
-        <h2>Java Getting Started</h2>
-        <div class="w3-code notranslate htmlHigh">
-            <p class="heading-colour">Java Install</p>
-            <p class="heading-distance">Some PCs might have Java already installed.
-                To check if you have Java installed on a Windows PC, search in the start bar for Java or type the following in Command Prompt (cmd.exe):</p>
-            <p class="heading-distance">C:\Users\Your Name>java -version</p>
-  
-            <p class="heading-colour">If Java is installed, you will see something like this (depending on version):</p>
-            <p class="heading-distance">java version "22.0.0" 2024-08-21 LTS
-                Java(TM) SE Runtime Environment 22.9 (build 22.0.0+13-LTS)
-                Java HotSpot(TM) 64-Bit Server VM 22.9 (build 22.0.0+13-LTS, mixed mode)</p>
-             <p class="heading-colour">If you do not have Java installed on your computer, you can download it for free at oracle.com.</p>   
-             <p class="heading-distance">Note: In this tutorial, we will write Java code in a text editor. However, it is possible to write Java in an Integrated Development Environment, such as IntelliJ IDEA, Netbeans or Eclipse, which are particularly useful when managing larger collections of Java files.</p>
+    <div class="mainSection">
+        <div class="w3-example">
+            <h2>Java Getting Started</h2>
+            <div class="w3-code notranslate htmlHigh">
+                <p class="heading-colour">Java Install</p>
+                <p class="heading-distance">Some PCs might have Java already installed.
+                    To check if you have Java installed on a Windows PC, search in the start bar for Java or type the
+                    following in Command Prompt (cmd.exe):</p>
+                <p class="heading-distance">C:\Users\Your Name>java -version</p>
+
+                <p class="heading-colour">If Java is installed, you will see something like this (depending on version):
+                </p>
+                <p class="heading-distance">java version "22.0.0" 2024-08-21 LTS
+                    Java(TM) SE Runtime Environment 22.9 (build 22.0.0+13-LTS)
+                    Java HotSpot(TM) 64-Bit Server VM 22.9 (build 22.0.0+13-LTS, mixed mode)</p>
+                <p class="heading-colour">If you do not have Java installed on your computer, you can download it for
+                    free at oracle.com.</p>
+            </div>
+            <p class="heading-distance">Note: In this tutorial, we will write Java code in a text editor. However, it is
+                possible to write Java in an Integrated Development Environment, such as IntelliJ IDEA, Netbeans or
+                Eclipse, which are particularly useful when managing larger collections of Java files.</p>
+        </div>
+
+        <div class="w3-example">
+            <h2>Java Quickstart</h2>
+            <div class="w3-code notranslate htmlHigh">
+                <p class="heading-colour">Java Install</p>
+                <p class="heading-distance">In Java, every application begins with a class name, and that class must
+                    match the filename.
+                    Let's create our first Java file, called Main.java, which can be done in any text editor (like
+                    Notepad).
+                    The file should contain a "Hello World" message, which is written with the following code:</p>
+            </div>
+            <div class="w3-code notranslate htmlHigh">
+                <p class="heading-colour">Main.java</p>
+                <p class="heading-distance">public class Main {</br>
+                    public static void main(String[] args) {</br>
+                    System.out.println("Hello World");</br>
+                    }</br>
+                    }</p>
+
+            </div>
+            <div class="w3-code notranslate htmlHigh">
+                <p class="heading-distance"> Save the code in Notepad as "Main.java". Open Command Prompt (cmd.exe),
+                    navigate to the directory where you saved your file, and type "javac Main.java":</p>
+
+                <p class="heading-distance">C:\Users\Your Name>javac Main.java</p>
+                <p class="heading-distance">This will compile your code. If there are no errors in the code, the command
+                    prompt will take you to the next line. Now, type "java Main" to run the file:</p>
+
+                <p class="heading-distance">C:\Users\Your Name>java Main</p>
+                <p class="heading-distance">The output should read:</p>
+
+                Hello World</p>
+            </div>
         </div>
     </div>
-
-    <div class="w3-example">
-        <h2>Java Quickstart</h2>
-        <div class="w3-code notranslate htmlHigh">
-            <p class="heading-colour">Java Install</p>
-            <p class="heading-distance">In Java, every application begins with a class name, and that class must match the filename.
-                Let's create our first Java file, called Main.java, which can be done in any text editor (like Notepad).
-                The file should contain a "Hello World" message, which is written with the following code:</p>
-             <p class="heading-colour">Main.java</p>   
-             <p class="heading-distance">public class Main {</br>
-                public static void main(String[] args) {</br>
-                  System.out.println("Hello World");</br>
-                }</br>
-              }</p>
-
-
-
-             <p class="heading-distance"> Save the code in Notepad as "Main.java". Open Command Prompt (cmd.exe), navigate to the directory where you saved your file, and type "javac Main.java":</p>
-
-             <p class="heading-distance">C:\Users\Your Name>javac Main.java</p>
-             <p class="heading-distance">This will compile your code. If there are no errors in the code, the command prompt will take you to the next line. Now, type "java Main" to run the file:</p>
-
-             <p class="heading-distance">C:\Users\Your Name>java Main</p>
-             <p class="heading-distance">The output should read:</p>
-
-Hello World</p>
-        </div>
     </div>
-</div>
-</div>
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 Learn Java - All rights reserved.</p>
-</footer>
-<!-- JavaScript -->
-<script src="/Javascript/scripts.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Learn Java - All rights reserved.</p>
+    </footer>
+    <!-- JavaScript -->
+    <script src="/Javascript/scripts.js"></script>
 </body>
+
 </html>
