@@ -56,6 +56,8 @@ public class PracticeProjectSpringBoot {
 		System.out.println(s1==s2);
 		System.out.println(s1.equals(s2));
 
+ output: true,true
+
 ans:The == operator compares object references. Since s1 and s2 refer to the same object in the string pool, s1 == s2 evaluates to true.
     The equals() method in the String class compares the content of the strings.
 Since both s1 and s2 have the same content ("Hello"), s1.equals(s2) returns true.
@@ -65,7 +67,7 @@ Since both s1 and s2 have the same content ("Hello"), s1.equals(s2) returns true
 		String s2 = new String("Hello");
 		System.out.println(s1==s2);
 		System.out.println(s1.equals(s2));
-
+        output: false,true
 ans: s1 == s2: false because s1 and s2 are different objects in memory.
      s1.equals(s2): true because s1 and s2 have the same string content.
 

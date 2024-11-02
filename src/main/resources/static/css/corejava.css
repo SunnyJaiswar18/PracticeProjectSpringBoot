@@ -81,3 +81,44 @@ body {
    .heading-distance {
     padding: .5em;
    }
+
+
+
+
+   /*  css for table */
+
+
+   /* Table styling */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header row styling */
+.custom-table thead th {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Table cell styling */
+.custom-table tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Alternating row colors */
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect */
+.custom-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
