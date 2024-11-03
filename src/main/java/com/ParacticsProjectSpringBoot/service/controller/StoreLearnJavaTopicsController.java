@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(path = "/api/LearnJava")
@@ -55,7 +57,7 @@ public class StoreLearnJavaTopicsController {
 
     // Endpoint to generate html file based on topics
     @GetMapping("/generateHtml")
-        public List<StoreLearnJavaTopics> generateHtml() {
+    public List<StoreLearnJavaTopics> generateHtml() {
         String SAVE_PATH = "D:\\spring projects\\PracticeProjectSpringBoot\\PracticeProjectSpringBoot\\src\\main\\resources\\static\\CoreJava";
 
         List<StoreLearnJavaTopics> topics = storeLearnJavaTopicsService.getAllTopics();
@@ -63,6 +65,12 @@ public class StoreLearnJavaTopicsController {
         for (StoreLearnJavaTopics topic : topics) {
             String fileName = topic.getName().replaceAll(" ", "-") + ".html"; // Sanitize the file name
             File file = new File(SAVE_PATH, fileName);
+
+            // Check if the file already exists
+            if (file.exists()) {
+                System.out.println("File " + fileName + " already exists. Skipping creation.");
+                continue;
+            }
 
             try (FileWriter writer = new FileWriter(file)) {
                 writer.write("<!DOCTYPE html>\n");
@@ -91,6 +99,7 @@ public class StoreLearnJavaTopicsController {
                 writer.write("        <button class=\"login-btn\">Login</button>\n");
                 writer.write("    </div>\n");
                 writer.write("</nav>\n");
+
                 // Main content section
                 writer.write("</div>");
                 writer.write("<div class=\"selectRiderForm\">\n");
@@ -98,7 +107,8 @@ public class StoreLearnJavaTopicsController {
                 writer.write("        <!-- List items will be generated here -->\n");
                 writer.write("    </ul>\n");
                 writer.write("</div>\n");
-                //middle content section
+
+                // Middle content section
                 writer.write("<div class=\"mainSection\">");
                 writer.write("<div class=\"w3-example\">");
                 writer.write("<h2>Java Tutorial</h2>");
@@ -107,8 +117,8 @@ public class StoreLearnJavaTopicsController {
                 writer.write("</div>");
                 writer.write("</div>");
                 writer.write("</div>");
-                // Footer sectionsssss
 
+                // Footer section
                 writer.write("<!-- Footer -->\n");
                 writer.write("<footer>\n");
                 writer.write("    <p>&copy; 2024 Learn Java - All rights reserved.</p>\n");
@@ -130,6 +140,7 @@ public class StoreLearnJavaTopicsController {
         return topics;
     }
 
+
     @DeleteMapping("/truncate")
     public String truncateTable() {
         // Truncate the database table
@@ -138,7 +149,10 @@ public class StoreLearnJavaTopicsController {
         // Directory path where the .html files are stored
         String SAVE_PATH = "D:\\spring projects\\PracticeProjectSpringBoot\\PracticeProjectSpringBoot\\src\\main\\resources\\static\\CoreJava";
 
-        // Delete all .html files in the directory
+        // Initialize a set to track unique file names (excluding duplicates)
+        Set<String> uniqueFileNames = new HashSet<>();
+
+        // Directory where the .html files are stored
         File directory = new File(SAVE_PATH);
 
         // Check if the directory exists and is a directory
@@ -148,11 +162,16 @@ public class StoreLearnJavaTopicsController {
 
             if (files != null) {
                 for (File file : files) {
-                    // Delete each file
-                    if (file.delete()) {
-                        System.out.println(file.getName() + " deleted successfully.");
+                    // If the file name is already in the set, delete it as a duplicate
+                    if (uniqueFileNames.contains(file.getName())) {
+                        if (file.delete()) {
+                            System.out.println(file.getName() + " (duplicate) deleted successfully.");
+                        } else {
+                            System.out.println("Failed to delete " + file.getName());
+                        }
                     } else {
-                        System.out.println("Failed to delete " + file.getName());
+                        // Add unique file name to the set
+                        uniqueFileNames.add(file.getName());
                     }
                 }
             }
@@ -160,7 +179,22 @@ public class StoreLearnJavaTopicsController {
             System.out.println("Directory does not exist or is not a directory.");
         }
 
-        return "Table truncated and HTML files deleted successfully";
+        return "Table truncated and duplicate HTML files deleted successfully";
+    }
+
+
+    @GetMapping("/files")
+    public List<String> getFileNames() throws IOException {
+      String SAVE_PATH = "D:\\spring projects\\PracticeProjectSpringBoot\\PracticeProjectSpringBoot\\src\\main\\resources\\static\\CoreJava";
+
+        Path dirPath = Paths.get(SAVE_PATH);
+        // Using Files.list to fetch all files in the directory
+        try (var paths = Files.list(dirPath)) {
+            return paths.filter(Files::isRegularFile) // Filters to get only regular files (ignores directories)
+                    .map(Path::getFileName)       // Gets the filename
+                    .map(Path::toString)          // Converts Path to String
+                    .collect(Collectors.toList()); // Collects the names into a List
+        }
     }
 
 }
