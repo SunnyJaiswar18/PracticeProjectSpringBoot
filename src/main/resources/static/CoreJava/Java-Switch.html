@@ -27,7 +27,75 @@
         <!-- List items will be generated here -->
     </ul>
 </div>
-<div class="mainSection"><div class="w3-example"><h2>Java Tutorial</h2><div class="w3-code notranslate htmlHigh"></div></div></div></div><!-- Footer -->
+<div class="mainSection">
+    <div class="w3-example">
+        <h2 class="heading-distance">Java Switch</h2>
+        <p>The <code>switch</code> statement in Java is used as an alternative to writing multiple <code>if...else</code> statements. It allows you to select one of many code blocks to be executed, based on the value of a variable.</p>
+        <p>Syntax:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+switch(expression) {
+    case x:
+        // code block
+        break;
+    case y:
+        // code block
+        break;
+    default:
+        // code block
+}
+            </pre></h3>
+        </div>
+        <p>This is how it works:</p>
+        <ul>
+            <li>The <code>switch</code> expression is evaluated once.</li>
+            <li>The value of the expression is compared with the values of each <code>case</code>.</li>
+            <li>If a match is found, the associated block of code is executed.</li>
+            <li>The <code>break</code> and <code>default</code> keywords are optional.</li>
+        </ul>
+        <p>The example below uses the weekday number to determine the weekday name:</p>
+    </div>
+    
+    <div class="w3-example">
+        <h2>Example</h2>
+        <p>In this example, <code>day</code> is an integer variable. Depending on its value, a specific day of the week will be printed.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+int day = 4;
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    case 3:
+        System.out.println("Wednesday");
+        break;
+    case 4:
+        System.out.println("Thursday");
+        break;
+    case 5:
+        System.out.println("Friday");
+        break;
+    case 6:
+        System.out.println("Saturday");
+        break;
+    case 7:
+        System.out.println("Sunday");
+        break;
+}
+// Outputs "Thursday" (day 4)
+            </pre></h3>
+        </div>
+    </div>
+    
+    <div class="w3-example">
+        <h2>The <code>break</code> Keyword</h2>
+        <p>When Java reaches a <code>break</code> keyword, it exits the <code>switch</code> block. This stops the execution of further code and case testing within the block.</p>
+        <p>When a match is found and the associated code has executed, a <code>break</code> statement will terminate the <code>switch</code> block. This helps save execution time by avoiding unnecessary checks.</p>
+    </div>
+</div>
 <footer>
     <p>&copy; 2024 Learn Java - All rights reserved.</p>
 </footer>

@@ -27,7 +27,212 @@
         <!-- List items will be generated here -->
     </ul>
 </div>
-<div class="mainSection"><div class="w3-example"><h2>Java Tutorial</h2><div class="w3-code notranslate htmlHigh"></div></div></div></div><!-- Footer -->
+<div class="mainSection">
+    <div class="w3-example">
+        <h2 class="heading-distance">Java if-else Statement</h2>
+        <p>In programming, decision-making is crucial for determining the flow of execution. Whether navigating through various scenarios in a program or controlling program behavior, decisions play an essential role. In Java, the 'if-else' statement is one of the fundamental constructs for decision-making.</p>
+        <p>The Java <code>if</code> statement is used to test conditions, evaluating a boolean expression as <code>true</code> or <code>false</code>. There are different types of <code>if</code> statements in Java:</p>
+        <ul>
+            <li><code>if</code> statement</li>
+            <li><code>if-else</code> statement</li>
+            <li><code>if-else-if</code> ladder</li>
+            <li>Nested <code>if</code> statement</li>
+        </ul>
+        
+        <h3>How Does It Work?</h3>
+        <p>When an <code>if-else</code> statement is encountered, the condition is evaluated. If the condition is <code>true</code>, the <code>if</code> block executes. If the condition is <code>false</code>, the <code>else</code> block executes, allowing the program to follow different paths based on the condition’s result.</p>
+        
+        <h3>Java if Statement</h3>
+        <p>The <code>if</code> statement in Java executes a block of code if the condition is <code>true</code>.</p>
+        <p>Syntax:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+if (condition) {  
+    // code to be executed  
+}  
+            </pre></h3>
+        </div>
+        
+        <h3>Example:</h3>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+//Java Program demonstrating the use of if statement  
+public class IfExample {  
+    public static void main(String[] args) {  
+        int age = 20;  
+        if (age > 18) {  
+            System.out.print("Age is greater than 18");  
+        }  
+    }  
+}  
+// Output: Age is greater than 18
+            </pre></h3>
+        </div>
+    </div>
+    
+    <div class="w3-example">
+        <h3>Java if-else Statement</h3>
+        <p>The <code>if-else</code> statement checks a condition, executing the <code>if</code> block if it’s <code>true</code> or the <code>else</code> block if it’s <code>false</code>.</p>
+        <p>Syntax:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+if (condition) {  
+    // code if condition is true  
+} else {  
+    // code if condition is false  
+}  
+            </pre></h3>
+        </div>
+        
+        <h3>Example:</h3>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+//Java Program demonstrating if-else statement (odd/even number check)  
+public class IfElseExample {  
+    public static void main(String[] args) {  
+        int number = 13;  
+        if (number % 2 == 0) {  
+            System.out.println("even number");  
+        } else {  
+            System.out.println("odd number");  
+        }  
+    }  
+}  
+// Output: odd number
+            </pre></h3>
+        </div>
+    </div>
+    
+    <div class="w3-example">
+        <h3>Leap Year Example Using if-else:</h3>
+        <p>A year is a leap year if it is divisible by 4 and 400, but not by 100.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+//Java Program to check for Leap Year  
+public class LeapYearExample {    
+    public static void main(String[] args) {    
+        int year = 2020;    
+        if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {  
+            System.out.println("LEAP YEAR");  
+        } else {  
+            System.out.println("COMMON YEAR");  
+        }  
+    }    
+}    
+// Output: LEAP YEAR
+            </pre></h3>
+        </div>
+    </div>
+    
+    <div class="w3-example">
+        <h3>Java if-else-if Ladder Statement</h3>
+        <p>The <code>if-else-if</code> ladder tests multiple conditions sequentially, executing only one of the blocks when a condition is true.</p>
+        <p>Syntax:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+if (condition1) {  
+    // code if condition1 is true  
+} else if (condition2) {  
+    // code if condition2 is true  
+} else if (condition3) {  
+    // code if condition3 is true  
+} else {  
+    // code if all conditions are false  
+}  
+            </pre></h3>
+        </div>
+        
+        <h3>Example:</h3>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+//Java Program to demonstrate the grading system using if-else-if ladder  
+public class IfElseIfExample {  
+    public static void main(String[] args) {  
+        int marks = 65;  
+          
+        if (marks < 50) {  
+            System.out.println("fail");  
+        } else if (marks >= 50 && marks < 60) {  
+            System.out.println("D grade");  
+        } else if (marks >= 60 && marks < 70) {  
+            System.out.println("C grade");  
+        } else if (marks >= 70 && marks < 80) {  
+            System.out.println("B grade");  
+        } else if (marks >= 80 && marks < 90) {  
+            System.out.println("A grade");  
+        } else if (marks >= 90 && marks <= 100) {  
+            System.out.println("A+ grade");  
+        } else {  
+            System.out.println("Invalid!");  
+        }  
+    }  
+}  
+// Output: C grade
+            </pre></h3>
+        </div>
+    </div>
+    
+    <div class="w3-example">
+        <h3>Java Nested if Statement</h3>
+        <p>The nested <code>if</code> statement is an <code>if</code> block within another <code>if</code> block, executed only if the outer condition is true.</p>
+        <p>Syntax:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+if (condition) {    
+    // code to be executed    
+    if (condition) {  
+        // code to be executed    
+    }    
+}  
+            </pre></h3>
+        </div>
+        
+        <h3>Example:</h3>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+//Java Program to demonstrate Nested If Statement  
+public class JavaNestedIfExample {    
+    public static void main(String[] args) {    
+        int age = 20;  
+        int weight = 80;    
+        
+        if (age >= 18) {    
+            if (weight > 50) {  
+                System.out.println("You are eligible to donate blood");  
+            }    
+        }    
+    }    
+}  
+// Output: You are eligible to donate blood
+            </pre></h3>
+        </div>
+    </div>
+    
+    <div class="w3-example">
+        <h3>Ternary Operator</h3>
+        <p>The ternary operator (<code>? :</code>) is a shorthand way to perform the task of an <code>if-else</code> statement. It evaluates a condition and returns one of two values.</p>
+        
+        <h3>Example:</h3>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+//Java Program demonstrating ternary operator  
+public class TernaryExample {    
+    public static void main(String[] args) {    
+        int number = 13;    
+        String output = (number % 2 == 0) ? "even number" : "odd number";    
+        System.out.println(output);  
+    }    
+}    
+// Output: odd number
+            </pre></h3>
+        </div>
+    </div>
+    
+    <div class="w3-example">
+        <h2>Conclusion</h2>
+        <p>The <code>if-else</code> statement is a vital tool in Java programming, enabling dynamic decision-making and diverse execution paths based on conditions. By mastering its usage, developers can create more responsive and robust applications.</p>
+    </div>
+</div>
 <footer>
     <p>&copy; 2024 Learn Java - All rights reserved.</p>
 </footer>

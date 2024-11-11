@@ -1,12 +1,6 @@
 package com.ParacticsProjectSpringBoot.service;
-
-import com.google.gson.JsonObject;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.*;
-
 @SpringBootApplication
 public class PracticeProjectSpringBoot {
 

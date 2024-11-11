@@ -27,7 +27,45 @@
         <!-- List items will be generated here -->
     </ul>
 </div>
-<div class="mainSection"><div class="w3-example"><h2>Java Tutorial</h2><div class="w3-code notranslate htmlHigh"></div></div></div></div><!-- Footer -->
+<div class="mainSection">
+    <div class="w3-example">
+        <h2 class="heading-distance">Java Math</h2>
+        <p>The <code>Math</code> class in Java provides methods for performing basic numeric operations like finding the absolute value, exponentiation, square roots, and trigonometric functions.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>double result = Math.sqrt(25);  // Returns 5.0</pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Math Methods</h2>
+        <ul>
+            <li><code>Math.abs(double a)</code> - Returns the absolute value of a.</li>
+            <li><code>Math.pow(double a, double b)</code> - Returns a raised to the power of b.</li>
+            <li><code>Math.sqrt(double a)</code> - Returns the square root of a.</li>
+            <li><code>Math.max(a, b)</code> and <code>Math.min(a, b)</code> - Returns the maximum/minimum value of two numbers.</li>
+            <li><code>Math.random()</code> - Returns a random double between 0.0 and 1.0.</li>
+        </ul>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    int max = Math.max(5, 10);       // 10
+    int min = Math.min(5, 10);       // 5
+    double power = Math.pow(2, 3);   // 8.0
+    double random = Math.random();   // Random number between 0.0 and 1.0
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Generating a Random Number</h2>
+        <p>To generate a random integer between 1 and 100:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    int randomNum = (int)(Math.random() * 100) + 1;
+    System.out.println(randomNum);
+            </pre></h3>
+        </div>
+    </div>
+</div>
 <footer>
     <p>&copy; 2024 Learn Java - All rights reserved.</p>
 </footer>
