@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Java</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/corejava.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-left">
+        <a href="#" class="logo">♨️Learn Java</a>
+    </div>
+    <div class="navbar-center">
+        <a href="#">Category</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="navbar-right">
+        <button class="login-btn">Login</button>
+    </div>
+</nav>
+</div><div class="selectRiderForm">
+    <ul class="sortable-list">
+        <!-- List items will be generated here -->
+    </ul>
+</div>
+<div class="mainSection">
+    <div class="w3-example">
+        <h2 class="heading-distance">Java Static Keyword</h2>
+        <p>The <code>static</code> keyword in Java is used for memory management. It can be applied to variables, methods, blocks, and nested classes. The <code>static</code> keyword belongs to the class rather than an instance of the class.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    // Java static variable example
+    class Student {
+        int rollno; // instance variable
+        String name;
+        static String college = "ITS"; // static variable
+        Student(int r, String n) {
+            rollno = r;
+            name = n;
+        }
+        void display() {
+            System.out.println(rollno + " " + name + " " + college);
+        }
+    }
+
+    public class TestStaticVariable {
+        public static void main(String[] args) {
+            Student s1 = new Student(111, "Karan");
+            Student s2 = new Student(222, "Aryan");
+            s1.display();
+            s2.display();
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Program of Counter Without Static Variable</h2>
+        <p>In this example, we have created an instance variable named <code>count</code> which is incremented in the constructor. Since the instance variable gets memory each time an object is created, the count variable will not retain its value across different objects.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class Counter {
+        int count = 0; // instance variable
+
+        Counter() {
+            count++; // incrementing value
+            System.out.println(count);
+        }
+
+        public static void main(String args[]) {
+            Counter c1 = new Counter();
+            Counter c2 = new Counter();
+            Counter c3 = new Counter();
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Program of Counter With Static Variable</h2>
+        <p>In this example, the <code>count</code> variable is static, meaning it gets memory only once. Any change made to it will reflect across all objects.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class Counter2 {
+        static int count = 0; // static variable
+
+        Counter2() {
+            count++; // incrementing static variable
+            System.out.println(count);
+        }
+
+        public static void main(String args[]) {
+            Counter2 c1 = new Counter2();
+            Counter2 c2 = new Counter2();
+            Counter2 c3 = new Counter2();
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Java Static Method</h2>
+        <p>A static method belongs to the class rather than an instance of the class. It can be invoked without the need for creating an object of the class.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class Student {
+        int rollno;
+        String name;
+        static String college = "ITS"; // static variable
+
+        static void change() {
+            college = "BBDIT"; // static method to change static variable
+        }
+
+        Student(int r, String n) {
+            rollno = r;
+            name = n;
+        }
+
+        void display() {
+            System.out.println(rollno + " " + name + " " + college);
+        }
+    }
+
+    public class TestStaticMethod {
+        public static void main(String args[]) {
+            Student.change(); // calling static method
+            Student s1 = new Student(111, "Karan");
+            Student s2 = new Student(222, "Aryan");
+            Student s3 = new Student(333, "Sonoo");
+            s1.display();
+            s2.display();
+            s3.display();
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Java Static Block</h2>
+        <p>A static block is used to initialize static data members. It is executed before the <code>main</code> method, during class loading.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class A2 {
+        static {
+            System.out.println("static block is invoked");
+        }
+
+        public static void main(String args[]) {
+            System.out.println("Hello main");
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Can We Execute a Program Without main() Method?</h2>
+        <p>In earlier versions of Java (JDK 1.6), it was possible to execute a program using a static block. However, in JDK 1.7 and above, it is mandatory to have a <code>main</code> method for execution.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class A3 {
+        static {
+            System.out.println("static block is invoked");
+            System.exit(0);
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Learn Java - All rights reserved.</p>
+</footer>
+<!-- JavaScript -->
+<script src="/Javascript/scripts.js"></script>
+</body>
+</html>

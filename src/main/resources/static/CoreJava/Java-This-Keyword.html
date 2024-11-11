@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Java</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/corejava.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-left">
+        <a href="#" class="logo">♨️Learn Java</a>
+    </div>
+    <div class="navbar-center">
+        <a href="#">Category</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="navbar-right">
+        <button class="login-btn">Login</button>
+    </div>
+</nav>
+</div><div class="selectRiderForm">
+    <ul class="sortable-list">
+        <!-- List items will be generated here -->
+    </ul>
+</div>
+<div class="mainSection">
+    <div class="w3-example">
+        <h2 class="heading-distance">Java This Keyword</h2>
+        <p>The <code>this</code> keyword in Java is a reference variable that refers to the current object. It can be used in various ways to refer to the current object and resolve ambiguities.</p>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example 1: Using <code>this</code> to Refer to Instance Variables</h2>
+        <p>When local variables (parameters) have the same names as instance variables, <code>this</code> can be used to distinguish between them:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+class Student{  
+    int rollno;  
+    String name;  
+    float fee;  
+    Student(int rollno, String name, float fee){  
+        this.rollno = rollno;  
+        this.name = name;  
+        this.fee = fee;  
+    }  
+    void display(){  
+        System.out.println(rollno + " " + name + " " + fee);  
+    }  
+}
+
+class TestThis1{  
+    public static void main(String args[]){  
+        Student s1 = new Student(111, "Ankit", 5000f);  
+        Student s2 = new Student(112, "Sumit", 6000f);  
+        s1.display();  
+        s2.display();  
+    }  
+}
+            </pre></h3>
+        </div>
+        <p>Output:</p>
+        <p>111 Ankit 5000.0</p>
+        <p>112 Sumit 6000.0</p>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example 2: Using <code>this</code> to Invoke Current Class Methods</h2>
+        <p>The <code>this</code> keyword can be used to invoke the current class method:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+class A{  
+    void m(){  
+        System.out.println("hello m");  
+    }  
+    void n(){  
+        System.out.println("hello n");  
+        this.m();  // invokes current class method m()
+    }  
+}  
+class TestThis4{  
+    public static void main(String args[]){  
+        A a = new A();  
+        a.n();  
+    }  
+}
+            </pre></h3>
+        </div>
+        <p>Output:</p>
+        <p>hello n</p>
+        <p>hello m</p>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example 3: Using <code>this()</code> to Invoke Current Class Constructor</h2>
+        <p>The <code>this()</code> constructor call can be used to reuse constructors in a class (constructor chaining):</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+class A{  
+    A(){  
+        System.out.println("hello a");  
+    }  
+    A(int x){  
+        this();  
+        System.out.println(x);  
+    }  
+}  
+class TestThis5{  
+    public static void main(String args[]){  
+        A a = new A(10);  
+    }  
+}
+            </pre></h3>
+        </div>
+        <p>Output:</p>
+        <p>hello a</p>
+        <p>10</p>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example 4: Using <code>this</code> as an Argument in a Method</h2>
+        <p>The <code>this</code> keyword can be passed as an argument in the method. This is particularly useful in event handling:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+class S2{  
+    void m(S2 obj){  
+        System.out.println("method is invoked");  
+    }  
+    void p(){  
+        m(this);  // passing current object as argument
+    }  
+    public static void main(String args[]){  
+        S2 s1 = new S2();  
+        s1.p();  
+    }  
+}
+            </pre></h3>
+        </div>
+        <p>Output:</p>
+        <p>method is invoked</p>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example 5: Using <code>this</code> as an Argument in the Constructor Call</h2>
+        <p>You can also pass <code>this</code> as an argument in the constructor. This is helpful when objects of one class are passed to another class:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+class B{  
+    A4 obj;  
+    B(A4 obj){  
+        this.obj = obj;  
+    }  
+    void display(){  
+        System.out.println(obj.data);  
+    }  
+}  
+
+class A4{  
+    int data = 10;  
+    A4(){  
+        B b = new B(this);  
+        b.display();  
+    }  
+    public static void main(String args[]){  
+        A4 a = new A4();  
+    }  
+}
+            </pre></h3>
+        </div>
+        <p>Output:</p>
+        <p>10</p>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example 6: Using <code>this</code> to Return the Current Class Instance</h2>
+        <p>In some cases, you can use <code>this</code> to return the current instance of the class from a method:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+class A{  
+    A getA(){  
+        return this;  // returning current class instance
+    }  
+    void msg(){  
+        System.out.println("Hello java");  
+    }  
+}  
+
+class Test1{  
+    public static void main(String args[]){  
+        new A().getA().msg();  
+    }  
+}
+            </pre></h3>
+        </div>
+        <p>Output:</p>
+        <p>Hello java</p>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example 7: Proving <code>this</code> Refers to Current Class Instance</h2>
+        <p>To prove that <code>this</code> refers to the current class instance, here is an example where the same reference ID is printed for both the object and <code>this</code>:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+class A5{  
+    void m(){  
+        System.out.println(this);  // prints the reference ID
+    }  
+    public static void main(String args[]){  
+        A5 obj = new A5();  
+        System.out.println(obj);  // prints the reference ID  
+        obj.m();  
+    }  
+}
+            </pre></h3>
+        </div>
+        <p>Output:</p>
+        <p>A5@22b3ea59</p>
+        <p>A5@22b3ea59</p>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Learn Java - All rights reserved.</p>
+</footer>
+<!-- JavaScript -->
+<script src="/Javascript/scripts.js"></script>
+</body>
+</html>

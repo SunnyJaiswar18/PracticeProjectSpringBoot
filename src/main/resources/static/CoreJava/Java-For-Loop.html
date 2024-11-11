@@ -27,7 +27,161 @@
         <!-- List items will be generated here -->
     </ul>
 </div>
-<div class="mainSection"><div class="w3-example"><h2>Java Tutorial</h2><div class="w3-code notranslate htmlHigh"></div></div></div></div><!-- Footer -->
+<div class="mainSection">
+    <div class="w3-example">
+        <h2 class="heading-distance">Java Loops</h2>
+        <p>The Java for loop is used to iterate a part of the program several times. If the number of iterations is fixed, it is recommended to use the for loop.</p>
+        <p>There are three types of for loops in Java:</p>
+        <ul>
+            <li>Simple for Loop</li>
+            <li>For-each or Enhanced for Loop</li>
+            <li>Labeled for Loop</li>
+        </ul>
+    </div>
+
+    <div class="w3-example">
+        <h2>Java Simple For Loop</h2>
+        <p>A simple for loop is similar to C/C++. It initializes a variable, checks the condition, and increments/decrements the value. It consists of four parts:</p>
+        <ul>
+            <li>Initialization: Executed once when the loop starts.</li>
+            <li>Condition: Evaluated each time to check if the loop continues.</li>
+            <li>Increment/Decrement: Increases or decreases the variable value.</li>
+            <li>Statement: Code executed each time the condition is true.</li>
+        </ul>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+for(int i=1;i<=10;i++){
+    System.out.println(i);
+}
+            </pre></h3>
+        </div>
+        <p>Output:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Java Nested For Loop</h2>
+        <p>If one for loop is inside another, it is known as a nested for loop. The inner loop executes completely whenever the outer loop executes.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+for(int i=1;i<=3;i++){
+    for(int j=1;j<=3;j++){
+        System.out.println(i+" "+j);
+    }
+}
+            </pre></h3>
+        </div>
+        <p>Output:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+1 1
+1 2
+1 3
+2 1
+2 2
+2 3
+3 1
+3 2
+3 3
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Java For-Each Loop</h2>
+        <p>The for-each loop is used to traverse arrays or collections in Java. It is easier to use than a simple for loop because you don't need to increment the value or use subscript notation.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+int arr[]={12,23,44,56,78};
+for(int i : arr){
+    System.out.println(i);
+}
+            </pre></h3>
+        </div>
+        <p>Output:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+12
+23
+44
+56
+78
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Java Labeled For Loop</h2>
+        <p>In a labeled for loop, we give a name to each loop. This is useful in nested loops where we can break or continue a specific loop.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+aa:
+    for(int i=1;i<=3;i++){
+        bb:
+        for(int j=1;j<=3;j++){
+            if(i==2 && j==2){
+                break aa; // Breaks outer loop
+            }
+            System.out.println(i+" "+j);
+        }
+    }
+            </pre></h3>
+        </div>
+        <p>Output:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+1 1
+1 2
+1 3
+2 1
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Java Infinite For Loop</h2>
+        <p>An infinite for loop can be created by using no conditions in the for loop.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+for(;;){
+    System.out.println("infinitive loop");
+}
+            </pre></h3>
+        </div>
+        <p>Output:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+infinitive loop
+infinitive loop
+infinitive loop
+            </pre></h3>
+        </div>
+        <p>Press <code>Ctrl+C</code> to stop the infinite loop.</p>
+    </div>
+
+    <div class="w3-example">
+        <h2>Comparison: For Loop vs While Loop vs Do-While Loop</h2>
+        <table class="custom-table">
+            <tr><th>Loop Type</th><th>When to Use</th><th>Syntax</th><th>Example</th></tr>
+            <tr><td>For loop</td><td>If the number of iterations is fixed</td><td><code>for(init; condition; incr/decr) { // code }</code></td><td><pre>for(int i=1; i<=10; i++) { System.out.println(i); }</pre></td></tr>
+            <tr><td>While loop</td><td>If the number of iterations is not fixed</td><td><code>while(condition) { // code }</code></td><td><pre>int i=1; while(i<=10) { System.out.println(i); i++; }</pre></td></tr>
+            <tr><td>Do-while loop</td><td>If the loop must execute at least once</td><td><code>do { // code } while(condition);</code></td><td><pre>int i=1; do { System.out.println(i); i++; } while(i<=10);</pre></td></tr>
+        </table>
+    </div>
+</div>
 <footer>
     <p>&copy; 2024 Learn Java - All rights reserved.</p>
 </footer>

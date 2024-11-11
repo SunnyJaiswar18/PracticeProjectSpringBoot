@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Java</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/corejava.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-left">
+        <a href="#" class="logo">♨️Learn Java</a>
+    </div>
+    <div class="navbar-center">
+        <a href="#">Category</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="navbar-right">
+        <button class="login-btn">Login</button>
+    </div>
+</nav>
+</div><div class="selectRiderForm">
+    <ul class="sortable-list">
+        <!-- List items will be generated here -->
+    </ul>
+</div>
+<div class="mainSection">
+    <div class="w3-example">
+        <h2 class="heading-distance">Java Objects and Classes</h2>
+        <p>In Java, objects and classes are the core concepts of Object-Oriented Programming (OOP). A class is a blueprint for creating objects, while an object represents an instance of a class. An object has a state, behavior, and identity.</p>
+    </div>
+
+    <div class="w3-example">
+        <h2>What is an Object in Java?</h2>
+        <p>An object is an entity that has state and behavior. It represents real-world entities like a chair, car, or bank account. For example, a pen has a state (color, brand) and behavior (write). An object is an instance of a class, and each object has its unique identity.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class Pen {
+        String brand = "Reynolds";
+        String color = "White";
+        
+        void write() {
+            System.out.println("Writing...");
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>What is a Class in Java?</h2>
+        <p>A class is a group of objects with common properties. It is a template or blueprint from which objects are created. A class can contain fields, methods, constructors, and more.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class Student {
+        int id;
+        String name;
+        
+        void display() {
+            System.out.println(id + " " + name);
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Defining a Class and Object</h2>
+        <p>In this example, we create a class <code>Student</code> with fields <code>id</code> and <code>name</code>, then instantiate an object of the <code>Student</code> class to print its values.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class Student {
+        int id;
+        String name;
+    }
+
+    public class TestStudent {
+        public static void main(String[] args) {
+            Student s1 = new Student();
+            System.out.println(s1.id);  // Outputs: 0
+            System.out.println(s1.name);  // Outputs: null
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Initializing an Object through a Reference Variable</h2>
+        <p>We can initialize an object by assigning values through the reference variable as shown in the following example:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class Student {
+        int id;
+        String name;
+    }
+
+    public class TestStudent {
+        public static void main(String[] args) {
+            Student s1 = new Student();
+            s1.id = 101;
+            s1.name = "Sonoo";
+            System.out.println(s1.id + " " + s1.name);  // Outputs: 101 Sonoo
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Initialization through Method</h2>
+        <p>Objects can also be initialized using methods. Below, the <code>insertRecord</code> method initializes the objects, and the <code>displayInformation</code> method displays the values.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class Student {
+        int rollno;
+        String name;
+        
+        void insertRecord(int r, String n) {
+            rollno = r;
+            name = n;
+        }
+
+        void displayInformation() {
+            System.out.println(rollno + " " + name);
+        }
+    }
+
+    public class TestStudent {
+        public static void main(String[] args) {
+            Student s1 = new Student();
+            Student s2 = new Student();
+            s1.insertRecord(111, "Karan");
+            s2.insertRecord(222, "Aryan");
+            s1.displayInformation();  // Outputs: 111 Karan
+            s2.displayInformation();  // Outputs: 222 Aryan
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Initialization through Constructor</h2>
+        <p>We can also initialize objects using constructors, which are special methods used to set the initial state of an object.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class Student {
+        int rollno;
+        String name;
+
+        Student(int r, String n) {
+            rollno = r;
+            name = n;
+        }
+
+        void displayInformation() {
+            System.out.println(rollno + " " + name);
+        }
+    }
+
+    public class TestStudent {
+        public static void main(String[] args) {
+            Student s1 = new Student(111, "Karan");
+            Student s2 = new Student(222, "Aryan");
+            s1.displayInformation();  // Outputs: 111 Karan
+            s2.displayInformation();  // Outputs: 222 Aryan
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Anonymous Object</h2>
+        <p>An anonymous object is an object without a reference variable. It can be used only once, typically when you don't need to access the object again after its use.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class Calculation {
+        void fact(int n) {
+            int fact = 1;
+            for (int i = 1; i <= n; i++) {
+                fact = fact * i;
+            }
+            System.out.println("Factorial is " + fact);
+        }
+
+        public static void main(String[] args) {
+            new Calculation().fact(5);  // Anonymous object to calculate factorial
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Real World Example - Account Class</h2>
+        <p>In the following example, we demonstrate a banking system where we deposit and withdraw money from an account. This is a real-world example of using objects to model a system.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    class Account {
+        int acc_no;
+        String name;
+        float amount;
+
+        void insert(int a, String n, float amt) {
+            acc_no = a;
+            name = n;
+            amount = amt;
+        }
+
+        void deposit(float amt) {
+            amount = amount + amt;
+            System.out.println(amt + " deposited");
+        }
+
+        void withdraw(float amt) {
+            if (amount < amt) {
+                System.out.println("Insufficient Balance");
+            } else {
+                amount = amount - amt;
+                System.out.println(amt + " withdrawn");
+            }
+        }
+
+        void checkBalance() {
+            System.out.println("Balance is: " + amount);
+        }
+
+        void display() {
+            System.out.println(acc_no + " " + name + " " + amount);
+        }
+    }
+
+    public class TestAccount {
+        public static void main(String[] args) {
+            Account a1 = new Account();
+            a1.insert(832345, "Ankit", 1000);
+            a1.display();  // Outputs: 832345 Ankit 1000.0
+            a1.checkBalance();  // Outputs: Balance is: 1000.0
+            a1.deposit(40000);
+            a1.checkBalance();  // Outputs: Balance is: 41000.0
+            a1.withdraw(15000);
+            a1.checkBalance();  // Outputs: Balance is: 26000.0
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Learn Java - All rights reserved.</p>
+</footer>
+<!-- JavaScript -->
+<script src="/Javascript/scripts.js"></script>
+</body>
+</html>

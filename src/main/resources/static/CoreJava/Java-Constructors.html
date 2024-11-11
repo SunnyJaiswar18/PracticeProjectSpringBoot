@@ -27,7 +27,181 @@
         <!-- List items will be generated here -->
     </ul>
 </div>
-<div class="mainSection"><div class="w3-example"><h2>Java Tutorial</h2><div class="w3-code notranslate htmlHigh"></div></div></div></div><!-- Footer -->
+<div class="mainSection">
+    <div class="w3-example">
+        <h2 class="heading-distance">Java Constructors</h2>
+        <p>In Java, a constructor is a block of code that is called when an instance of a class is created. It is used to initialize the object. There are two types of constructors:</p>
+        <ul>
+            <li><b>Default Constructor</b>: A constructor that does not take any arguments.</li>
+            <li><b>Parameterized Constructor</b>: A constructor that takes arguments to initialize an object with specific values.</li>
+        </ul>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Default Constructor</h2>
+        <p>A default constructor is called when no arguments are provided during object creation. If no constructor is defined, the compiler provides a default one.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+class Bike1 {  
+    // Default Constructor  
+    Bike1() {  
+        System.out.println("Bike is created");  
+    }  
+    public static void main(String args[]) {  
+        Bike1 b = new Bike1();  
+    }  
+}  
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Parameterized Constructor</h2>
+        <p>A parameterized constructor allows initializing an object with different values during creation.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+class Student4 {  
+    int id;  
+    String name;  
+    // Parameterized Constructor  
+    Student4(int i, String n) {  
+        id = i;  
+        name = n;  
+    }  
+    void display() {  
+        System.out.println(id + " " + name);  
+    }  
+    public static void main(String args[]) {  
+        Student4 s1 = new Student4(111, "Karan");  
+        Student4 s2 = new Student4(222, "Aryan");  
+        s1.display();  
+        s2.display();  
+    }  
+}  
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Constructor Overloading in Java</h2>
+        <p>Constructor overloading occurs when you have more than one constructor in a class, each with a different parameter list.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+class Student5 {  
+    int id;  
+    String name;  
+    int age;  
+    // Two-argument Constructor  
+    Student5(int i, String n) {  
+        id = i;  
+        name = n;  
+    }  
+    // Three-argument Constructor  
+    Student5(int i, String n, int a) {  
+        id = i;  
+        name = n;  
+        age = a;  
+    }  
+    void display() {  
+        System.out.println(id + " " + name + " " + age);  
+    }  
+    public static void main(String args[]) {  
+        Student5 s1 = new Student5(111, "Karan");  
+        Student5 s2 = new Student5(222, "Aryan", 25);  
+        s1.display();  
+        s2.display();  
+    }  
+}  
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Constructor Chaining</h2>
+        <p>Constructor chaining is the practice of one constructor calling another constructor in the same class or its superclass.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+// Base class for vehicles  
+class Vehicle {  
+    private String make;  
+    private String model;  
+    private int year;  
+    // Constructor with all parameters  
+    public Vehicle(String make, String model, int year) {  
+        this.make = make;  
+        this.model = model;  
+        this.year = year;  
+    }  
+    // Default constructor  
+    public Vehicle() {  
+        this("Unknown", "Unknown", 2020);  
+    }  
+    public void displayInfo() {  
+        System.out.println("Vehicle: " + make + " " + model + " (" + year + ")");  
+    }  
+}  
+
+// Derived class from Vehicle  
+class Car extends Vehicle {  
+    private boolean isConvertible;  
+    public Car(String make, String model, int year, boolean isConvertible) {  
+        super(make, model, year);  
+        this.isConvertible = isConvertible;  
+    }  
+    public void displayInfo() {  
+        super.displayInfo();  
+        System.out.println("Convertible: " + (isConvertible ? "Yes" : "No"));  
+    }  
+}  
+public class ChangeingConstructor {  
+    public static void main(String[] args) {  
+        Vehicle vehicle = new Vehicle("Toyota", "Corolla", 2022);  
+        Car car = new Car("Ford", "Mustang", 2021, true);  
+        vehicle.displayInfo();  
+        car.displayInfo();  
+    }  
+}  
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Java Super Class Constructor</h2>
+        <p>The <code>super</code> keyword is used to invoke the constructor of a superclass from a subclass.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+class Person {  
+    private String name;  
+    private int age;  
+    public Person(String name, int age) {  
+        this.name = name;  
+        this.age = age;  
+    }  
+    public void displayInfo() {  
+        System.out.println("Name: " + name + ", Age: " + age);  
+    }  
+}  
+class Student extends Person {  
+    private String school;  
+    public Student(String name, int age, String school) {  
+        super(name, age);  
+        this.school = school;  
+    }  
+    public void displayInfo() {  
+        super.displayInfo();  
+        System.out.println("School: " + school);  
+    }  
+}  
+public class SuperConstructor {  
+    public static void main(String[] args) {  
+        Student student = new Student("John Doe", 20, "Springfield High");  
+        student.displayInfo();  
+    }  
+}  
+            </pre></h3>
+        </div>
+    </div>
+</div>
 <footer>
     <p>&copy; 2024 Learn Java - All rights reserved.</p>
 </footer>

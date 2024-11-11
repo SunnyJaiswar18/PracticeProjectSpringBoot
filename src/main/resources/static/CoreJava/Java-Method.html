@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Java</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/corejava.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-left">
+        <a href="#" class="logo">♨️Learn Java</a>
+    </div>
+    <div class="navbar-center">
+        <a href="#">Category</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="navbar-right">
+        <button class="login-btn">Login</button>
+    </div>
+</nav>
+</div><div class="selectRiderForm">
+    <ul class="sortable-list">
+        <!-- List items will be generated here -->
+    </ul>
+</div>
+<div class="mainSection">
+    <div class="w3-example">
+        <h2 class="heading-distance">Methods in Java</h2>
+        <p>A method in Java is a block of code that performs a specific task or operation. Methods help in achieving code reusability and easy code modification.</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    // A simple method declaration
+    public static void findEvenOdd(int num) {
+        if (num % 2 == 0)
+            System.out.println(num + " is even");
+        else
+            System.out.println(num + " is odd");
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Calling a User-defined Method</h2>
+        <p>Here is an example of calling the method <code>findEvenOdd</code> that checks if a number is even or odd:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int num = scan.nextInt();
+        findEvenOdd(num); // Method call
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Returning a Value from a Method</h2>
+        <p>This example shows how a method can return a value. Here, the method <code>add</code> returns the sum of two integers:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    public static int add(int n1, int n2) {
+        int sum = n1 + n2;
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int a = 5, b = 10;
+        int result = add(a, b); // Method call
+        System.out.println("The sum is: " + result);
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Static Methods</h2>
+        <p>A static method belongs to the class, not an instance of the class. It can be called without creating an object of the class:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    static void show() {
+        System.out.println("This is a static method.");
+    }
+
+    public static void main(String[] args) {
+        show(); // Static method call
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Instance Methods</h2>
+        <p>An instance method requires an object of the class to be called:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        InstanceMethodExample obj = new InstanceMethodExample();
+        System.out.println("The sum is: " + obj.add(12, 13));
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Accessor and Mutator Methods</h2>
+        <p>Accessor methods get the value of a private field, while mutator methods modify the value:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    public class Student {
+        private int roll;
+        private String name;
+
+        // Accessor method
+        public int getRoll() {
+            return roll;
+        }
+
+        // Mutator method
+        public void setRoll(int roll) {
+            this.roll = roll;
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Abstract Method</h2>
+        <p>Abstract methods do not have a body. They are declared in abstract classes and must be implemented by subclasses:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    abstract class Demo {
+        abstract void display();
+    }
+
+    public class MyClass extends Demo {
+        void display() {
+            System.out.println("Abstract method implemented.");
+        }
+
+        public static void main(String args[]) {
+            Demo obj = new MyClass();
+            obj.display();
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h2>Example: Factory Method</h2>
+        <p>A factory method creates and returns an instance of a class:</p>
+        <div class="w3-code notranslate htmlHigh">
+            <h3><pre>
+    public class NumberFormatExample {
+        public static NumberFormat getNumberInstance() {
+            return NumberFormat.getInstance();
+        }
+
+        public static void main(String[] args) {
+            NumberFormat nf = getNumberInstance();
+            System.out.println(nf.format(12345.6789));
+        }
+    }
+            </pre></h3>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Learn Java - All rights reserved.</p>
+</footer>
+<!-- JavaScript -->
+<script src="/Javascript/scripts.js"></script>
+</body>
+</html>
