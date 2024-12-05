@@ -1,6 +1,10 @@
 package com.ParacticsProjectSpringBoot.service;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 @SpringBootApplication
 public class PracticeProjectSpringBoot {
 
@@ -200,6 +204,24 @@ for(int i = reverse.length()-1; i>=0;i--){
 
 		String[] array = {"banana", "Apple", "grapes", "apple"};
 		   Arrays.sort(array);*/
+
+//find Second-Smallest element in Array
+/*		System.out.println("Enter the number");
+		Scanner sc = new Scanner(System.in);
+
+		int value = sc.nextInt();
+		int[] arr = new int[value];
+		System.out.println("Enter the elements of the array: ");
+		for(int i=0; i<value;i++){
+			arr[i] = sc.nextInt();
+		}
+		Arrays.sort(arr);
+		System.out.println("Sorted array: " + Arrays.toString(arr));
+		int secondSmallest = arr[1];
+
+		System.out.println("Second smallest element: " + secondSmallest);*/
+
+
 	}
 }
 
