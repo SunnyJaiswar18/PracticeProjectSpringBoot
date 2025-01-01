@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Java</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/corejava.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-left">
+        <a href="#" class="logo">♨️Learn Java</a>
+    </div>
+    <div class="navbar-center">
+        <a href="#">Category</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="navbar-right">
+        <button class="login-btn">Login</button>
+    </div>
+</nav>
+</div><div class="selectRiderForm">
+    <ul class="sortable-list">
+        <!-- List items will be generated here -->
+    </ul>
+</div>
+<div class="mainSection">
+    <div class="w3-example">
+        <h2>Java Question Answer</h2>
+        <div class="w3-example">
+            <div class="w3-code notranslate htmlHigh">
+                <p class="heading-colour">1. Java static keyword</strong></p>
+                <p class="heading-distance">The static keyword in Java is used for memory management mainly. We can apply static keyword with variables, methods, blocks and nested classes.
+                </p>
+                <ul class="heading-distance">
+                    <p>The static can be::</p>
+                    <li> Variable (also known as a class variable)</li>
+                    <li> Method (also known as a class method)</li>
+                    <li> Block</li>
+                    <li>Nested class</li>
+                </ul>
+
+                <p class="heading-colour">1. Static Variable</strong></p>
+                <ul class="heading-distance">
+                    <li> The static variable can be used to refer to the common property of all objects ,for example, the company name of employees, college name of students, etc.
+                    </li>
+                    <li> The static variable gets memory only once in the class area at the time of class loading.
+                    </li>
+                    <li> Static variables are shared among all instances of the class, meaning if the value of a static variable is changed in one instance, it will reflect the change in all other instances as well.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="w3-example">
+            <div class="w3-code notranslate htmlHigh">
+                <p class="heading-colour">1. Java static method</strong></p>
+                <p class="heading-distance">If we apply a static keyword with any method, it is known as a static method.</p>
+                <ul class="heading-distance">
+                    <li> A static method belongs to the class rather than the object of a class.
+                    </li>
+                    <li>A static method can be invoked without the need for creating an instance of a class.</li>
+                    <li> A static method can access static data members and can change their value of it.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="w3-example">
+            <p class="heading-colour">3. Java Static Block</strong></p>
+            <p>It is used to initialize the static data member.
+                It is executed before the main() method at the time of class loading.</p>
+            <div class="w3-code notranslate htmlHigh">
+                <p class="heading-colour"></strong></p>
+                <pre><b>class A2{
+  static{System.out.println("static block is invoked");}
+  public static void main(String args[]){
+   System.out.println("Hello main");
+  }
+}
+Output:
+</b></pre>
+            </div>
+        </div>
+
+
+        <div class="w3-example">
+            <p class="heading-colour">4. Static class in Java</strong></p>
+            <p>A static class in Java is a class that cannot be instantiated. That is, we cannot create objects of a static class. We can only access its members using the class name itself. In other words, a static class is a class that only contains static members.</p>
+            <p>Static classes are often used to group related utility methods together. For example, the Math class in Java is a static class that provides various mathematical operations such as finding the maximum or minimum value, trigonometric functions, and more. We can access the methods in the Math class using the class name and the dot operator, like this: Math.max(5, 10).</p>
+            <div class="w3-code notranslate htmlHigh">
+                <pre><b>public class StringUtils {
+
+    public static String reverse(String str) {
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
+    }
+
+    public static int length(String str) {
+        return str.length();
+    }
+
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+
+        String reversedStr = StringUtils.reverse(str);
+        int strLength = StringUtils.length(str);
+        System.out.println(reversedStr);
+        System.out.println(strLength);
+    }
+}</b></pre>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</div><!-- Footer -->
+<footer>
+    <p>&copy; 2024 Learn Java - All rights reserved.</p>
+</footer>
+<!-- JavaScript -->
+<script src="/Javascript/scripts.js"></script>
+</body>
+</html>

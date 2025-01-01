@@ -221,7 +221,13 @@ for(int i = reverse.length()-1; i>=0;i--){
 
 		System.out.println("Second smallest element: " + secondSmallest);*/
 
-
+// reverse pyramid
+      /*for(int k=0;k<=5;k++) {
+		  for (int i = 5; i >= k; i--) {
+			  System.out.print(" *");
+		  }
+		  System.out.println();
+	  }*/
 	}
 }
 
